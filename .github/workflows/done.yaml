@@ -1,7 +1,7 @@
 name: Done
 env:
-  REPO_OWNER: meroware
-  REPO_NAME: example-event-dispatcher-workflows
+  REPO_OWNER: monali567
+  REPO_NAME: APICall
   GITHUB_TOKEN: ${{ secrets.TOKEN }}
 on:
   repository_dispatch:
