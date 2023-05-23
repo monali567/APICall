@@ -17,7 +17,7 @@ async function run(command) {
     const {
         REPO_OWNER: owner,
         REPO_NAME: repo,
-        GITHUB_TOKEN: tokens,
+        GITHUB_TOKEN: token,
     } = process.env;
 
     const isAllInOne = workflowType === "allinone";
@@ -39,7 +39,7 @@ async function run(command) {
             throw new Error('Command not supported');
     }
 
-    if(!owner || !repo || !tokens) {
+    if(!owner || !repo || !token) {
         throw new Error('Owner and repo required');
     }
     
@@ -48,7 +48,7 @@ async function run(command) {
     console.log(`Dispatching ${dispatchUrl} with paylaod`, payload);
     const res = await axios.post(dispatchUrl, payload, {
         headers: {
-            Authorization: `Bearer ${tokens}`,
+            Authorization: `Bearer ${token}`,
             Accept: "application/vnd.github.v3+json" 
         }
     })
