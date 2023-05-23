@@ -2,7 +2,7 @@ name: Done
 env:
   REPO_OWNER: monali567
   REPO_NAME: APICall
-  GITHUB_TOKEN: ${{ secrets.Tokens }}
+  GITHUB_TOKEN: ${{ secrets.Token }}
 on:
   repository_dispatch:
     types: [run-done]
