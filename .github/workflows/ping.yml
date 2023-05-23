@@ -2,7 +2,7 @@ name: Ping
 env:
   REPO_OWNER: monali567
   REPO_NAME: APICall
-  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.Tokens }}
 on:
   repository_dispatch:
     types: [run-ping]
