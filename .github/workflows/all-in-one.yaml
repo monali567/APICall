@@ -8,7 +8,7 @@ on:
     types: [run-ping-allinone, run-pong-allinone, run-done-allinone]
 jobs:
   job:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install packages
